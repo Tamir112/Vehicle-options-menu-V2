@@ -299,7 +299,7 @@ else
   local non = NativeUI.CreateItem("This vehicle has no liverys to choose from :(","")
   livery:AddItem(non)
 end
-local mad = NativeUI.CreateItem("~b~Made by Tamir112 Modifications", "~g~Tamir112modifications.xyz ~w~for more!")
+local mad = NativeUI.CreateItem("~b~Made by Tamir112 Modifications", "")
 menu:AddItem(mad)
 
 end
