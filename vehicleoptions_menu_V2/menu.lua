@@ -495,7 +495,9 @@ function Openmenu()
 if Config.command ~= "" then
 RegisterCommand(Config.command, function()
   Citizen.Wait(0)
-  if IsPedInAnyVehicle(GetPlayerPed(-1), false) then
+   local ped = GetPlayerPed(-1)
+   local veh = GetVehiclePedIsIn(ped)
+   if IsPedInAnyVehicle(ped, false) and GetPedInVehicleSeat(veh, -1) == ped then
     mainMenu:Visible(not mainMenu:Visible())
 else 
   ShowNotification("~r~You need to be in a vehicle to use this menu")
